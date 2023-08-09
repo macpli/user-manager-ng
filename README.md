@@ -29,3 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 =======
 # simple-app-ng
 >>>>>>> 9975b0c2e7b60dbb3ee3206e341501c2e6e96f82
+# user-manager-ng
