@@ -17,11 +17,15 @@ export class AddUserComponent implements OnInit {
 
   constructor(private userService: UserService, private router: Router) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    
+  }
 
   onSubmit() {
+
     if(!this.name){
       alert('Please add a name!');
+      
       return;
     }
 

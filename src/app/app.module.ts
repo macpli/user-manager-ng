@@ -10,6 +10,7 @@ import { MainComponent } from './components/main/main.component';
 import { UsersPanelComponent } from './components/users-panel/users-panel.component';
 import { RouterModule } from '@angular/router';
 import { AddUserComponent } from './components/add-user/add-user.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AddUserComponent } from './components/add-user/add-user.component';
     MainComponent,
     UsersPanelComponent,
     AddUserComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
