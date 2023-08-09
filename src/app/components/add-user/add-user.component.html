@@ -1,0 +1,18 @@
+<div class="card mx-auto">
+    <div class="card-body">
+        <form (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label  for="name" class="form-label">Name</label>
+              <input  type="text" class="form-control" name="name" [(ngModel)]="name" id="name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" name="email" [(ngModel)]="email" id="email">
+            </div>
+            <div class="buttonsContainer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-outline-secondary" (click)="clickButton('/users')">View Users</button>    
+            </div>
+          </form>
+    </div>
+  </div>

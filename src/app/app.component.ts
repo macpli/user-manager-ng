@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { User } from 'User';
+import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'simple-app';
+  title = 'User Manager';
+  // users: User[] = [];
+  // constructor(private userService: UserService){}
+
+  // addUser(user: User){
+  //   this.userService.addUser(user).subscribe((user) => (this.users.push(user)));
+  // }
 }

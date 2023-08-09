@@ -1,0 +1,19 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "krzysztof",
+      "email": "krzysztof@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "michal",
+      "email": "michal@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "maciej",
+      "email": "maciej@gmail.com"
+    }
+  ]
+}

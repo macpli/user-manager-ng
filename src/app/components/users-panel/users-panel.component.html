@@ -1,0 +1,27 @@
+<div class="container-lg mt-5">
+  <div class="card">
+    <div class="card-body">
+      <h1>Users Panel</h1>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <th scope="row">{{user.id}}</th>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+          </tr>
+          
+        </tbody>
+      </table>
+
+      <button type="button" class="btn btn-outline-secondary" (click)="clickButton('/welcome')">Back</button>
+    </div>
+  </div>
+</div>
