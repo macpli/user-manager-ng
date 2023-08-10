@@ -13,6 +13,7 @@ import { AddUserComponent } from './components/add-user/add-user.component';
 import { HeaderComponent } from './components/header/header.component';
 import { DeleteUserComponent } from './components/delete-user/delete-user.component';
 import { UpdateUserComponent } from './components/update-user/update-user.component';
+import { UpdateUserPanelComponent } from './components/update-user-panel/update-user-panel.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { UpdateUserComponent } from './components/update-user/update-user.compon
     HeaderComponent,
     DeleteUserComponent,
     UpdateUserComponent,
+    UpdateUserPanelComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +34,7 @@ import { UpdateUserComponent } from './components/update-user/update-user.compon
     RouterModule.forRoot([
       {path: 'welcome', component: MainComponent},
       {path: 'users', component: UsersPanelComponent},
+      {path: 'users-update', component: UpdateUserPanelComponent},
       {path: '**', component: MainComponent},
       {path: '', component: MainComponent},
     ]),
