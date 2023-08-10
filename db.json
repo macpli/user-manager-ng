@@ -9,21 +9,6 @@
       "id": 2,
       "name": "michal",
       "email": "michal@gmail.com"
-    },
-    {
-      "id": 3,
-      "name": "maciej",
-      "email": "maciej@gmail.com"
-    },
-    {
-      "name": "Ola",
-      "email": "ola@email.com",
-      "id": 4
-    },
-    {
-      "name": "Katarzyna",
-      "email": "katarzyna@op.pl",
-      "id": 5
     }
   ]
 }

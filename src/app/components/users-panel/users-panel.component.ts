@@ -18,6 +18,12 @@ export class UsersPanelComponent implements OnInit  {
     this.userService.getUser().subscribe((users) => this.users = users);
   }
 
+  deleteUser(user: User){
+    this.userService.deleteUser(user).
+    subscribe(
+      () => this.users = this.users.filter(u => u.id !== user.id));
+  }
+
 
   clickButton(path: string){
     this.router.navigate([path])

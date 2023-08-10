@@ -16,6 +16,7 @@
             <th scope="row">{{user.id}}</th>
             <td>{{user.name}}</td>
             <td>{{user.email}}</td>
+            <app-delete-user (onDeleteUser) = "deleteUser(user)"></app-delete-user>
           </tr>
           
         </tbody>

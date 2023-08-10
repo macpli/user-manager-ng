@@ -11,6 +11,7 @@ import { UsersPanelComponent } from './components/users-panel/users-panel.compon
 import { RouterModule } from '@angular/router';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { HeaderComponent } from './components/header/header.component';
+import { DeleteUserComponent } from './components/delete-user/delete-user.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HeaderComponent } from './components/header/header.component';
     UsersPanelComponent,
     AddUserComponent,
     HeaderComponent,
+    DeleteUserComponent,
   ],
   imports: [
     BrowserModule,
