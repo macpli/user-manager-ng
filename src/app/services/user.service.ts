@@ -17,11 +17,16 @@ export class UserService {
 
   constructor(private http:HttpClient) { }
 
+  addUser(user: User): Observable<User> {
+    return this.http.post<User>(this.url, user, httpOptions);
+  } 
+
   getUser(): Observable<User[]> {
     return this.http.get<User[]>(this.url)
   }
 
-  addUser(user: User): Observable<User> {
-    return this.http.post<User>(this.url, user, httpOptions);
+  deleteUser(user: User): Observable<User> {
+    const newUrl = `${this.url}/${user.id}`;
+    return this.http.delete<User>(newUrl);
   }
 }

@@ -19,6 +19,11 @@
       "name": "Ola",
       "email": "ola@email.com",
       "id": 4
+    },
+    {
+      "name": "Katarzyna",
+      "email": "katarzyna@op.pl",
+      "id": 5
     }
   ]
 }
