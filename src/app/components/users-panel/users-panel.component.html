@@ -16,7 +16,9 @@
             <th scope="row">{{user.id}}</th>
             <td>{{user.name | titlecase}}</td>
             <td>{{user.email | lowercase}}</td>
-            <app-update-user></app-update-user>
+            <td></td>
+
+            <app-update-user (onUpdateUser) = "updateUser(user)"></app-update-user>
             <app-delete-user (onDeleteUser) = "deleteUser(user)"></app-delete-user>
           </tr>
         </tbody>
@@ -24,5 +26,6 @@
 
       <button type="button" class="btn btn-outline-secondary" (click)="clickButtonBack('/welcome')">Back</button>
     </div>
+    <app-update-user-panel (onUpdateUser) = "updateUser($event)" class="mb-3"></app-update-user-panel>
   </div>
 </div>

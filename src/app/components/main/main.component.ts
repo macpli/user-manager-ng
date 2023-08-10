@@ -16,6 +16,8 @@ export class MainComponent implements OnInit {
 
   addUser(user: User){
     this.userService.addUser(user).subscribe((user) => (this.users.push(user)));
+    console.log('add-user: in addUser');
+
   }
 
 }

@@ -18,7 +18,13 @@ export class UsersPanelComponent implements OnInit  {
     this.userService.getUser().subscribe((users) => this.users = users);
   }
 
+  updateUser(user: User){
+    console.log('in updateUser ', user.name, user.id);
+    this.userService.updateUser(user).subscribe();
+  }
+
   deleteUser(user: User){
+    console.log('in deleteUser ', user.name);
     this.userService.deleteUser(user).
     subscribe(
       () => this.users = this.users.filter(u => u.id !== user.id));

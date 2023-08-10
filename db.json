@@ -1,24 +1,19 @@
 {
   "students": [
     {
-      "id": 1,
-      "name": "krzysztof",
-      "email": "krzysztof@gmail.com"
-    },
-    {
-      "id": 2,
-      "name": "michal",
-      "email": "michal@gmail.com"
-    },
-    {
       "name": "Maciej",
       "email": "maciej@gmail.com",
-      "id": 3
+      "id": 1
     },
     {
-      "name": "Kasia",
-      "email": "KaSiA@op.pl",
-      "id": 4
+      "name": "Waldemar",
+      "email": "waldemar@gmail.pl",
+      "id": 2
+    },
+    {
+      "name": "Katarzyna",
+      "email": "katarzyna@op.pl",
+      "id": 3
     }
   ]
 }

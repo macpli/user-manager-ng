@@ -22,13 +22,6 @@ export class AddUserComponent implements OnInit {
   }
 
   onSubmit() {
-
-    if(!this.name){
-      alert('Please add a name!');
-      
-      return;
-    }
-
     const newUser = {
       name: this.name,
       email: this.email,
@@ -38,9 +31,11 @@ export class AddUserComponent implements OnInit {
 
     this.name ='';
     this.email ='';
+    console.log('add-user: in OnSubmit');
   }
 
   clickButton(path: string) {
     this.router.navigate([path])
   }
+
 }

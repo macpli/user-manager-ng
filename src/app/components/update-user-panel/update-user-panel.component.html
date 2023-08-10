@@ -2,14 +2,14 @@
     <div class="card mx-auto">
         <div class="card-body">
         <h1 class="mb-3">Update User</h1>
-          <form class="needs-validation" novalidate>
+          <form class="needs-validation" novalidate (ngSubmit)="onSubmit()">
             <div class="mb-3">
               <label for="name" class="form-label">Name: </label>
-              <input type="text" class="form-control" name="name" id="name" placeholder="Change name">
+              <input type="text" class="form-control" name="name" [(ngModel)]="name" id="name" placeholder="Change name">
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Email: </label>
-              <input type="email" class="form-control" name="email" id="email" placeholder="Change email">
+              <input type="email" class="form-control" name="email" [(ngModel)]="email" id="email" placeholder="Change email">
             </div>
             <button type="submit" class="btn btn-success mb-3">Update</button>
           </form>

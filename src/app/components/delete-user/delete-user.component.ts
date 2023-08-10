@@ -18,6 +18,7 @@ export class DeleteUserComponent implements OnInit {
   }
 
   onDelete(user: any){
+    console.log('in onDelete')
     this.onDeleteUser.emit(user)
   }
 

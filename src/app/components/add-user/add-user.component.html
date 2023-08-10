@@ -3,7 +3,13 @@
     <form class="needs-validation" novalidate (ngSubmit)="onSubmit()">
       <div class="mb-3">
         <label for="name" class="form-label">Name*</label>
-        <input type="text" class="form-control" name="name" [(ngModel)]="name" id="name" placeholder="Please enter a name">
+        <input type="text" class="form-control formName" name="name" [(ngModel)]="name" id="name" placeholder="Please enter a name" required>
+        <div *ngIf="" class="alert">
+          <div class="alert alert-danger" role="alert" role="alert">
+            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        </div>
       </div>
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
