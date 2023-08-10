@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { HeaderComponent } from './components/header/header.component';
 import { DeleteUserComponent } from './components/delete-user/delete-user.component';
+import { UpdateUserComponent } from './components/update-user/update-user.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { DeleteUserComponent } from './components/delete-user/delete-user.compon
     AddUserComponent,
     HeaderComponent,
     DeleteUserComponent,
+    UpdateUserComponent,
   ],
   imports: [
     BrowserModule,
