@@ -15,7 +15,9 @@ export class UpdateUserPanelComponent implements OnInit {
 
   name: string = '';
   email: string = '';
-  id: number = 1;
+  id: number = 4;
+
+  tglState: boolean = false;
 
   constructor(private router: Router, private userService: UserService) { }
 
@@ -35,6 +37,12 @@ export class UpdateUserPanelComponent implements OnInit {
     this.name ='';
     this.email ='';
     console.log('update-user-panel: in OnSubmit');
+  }
+
+  tglUpdate(){
+    if(this.tglState == false){
+      return this.tglState = true;
+    }else return this.tglState = false;
   }
 
   clickButtonBack(path: string){
