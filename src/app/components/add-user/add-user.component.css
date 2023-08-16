@@ -1,4 +1,4 @@
-#name.ng-invalid.ng-touched{
+.ng-pristine#name.ng-invalid.ng-touched {
     background-color: tomato;
 }
 
