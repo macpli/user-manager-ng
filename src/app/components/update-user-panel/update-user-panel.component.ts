@@ -15,7 +15,7 @@ export class UpdateUserPanelComponent implements OnInit {
 
   name: string = '';
   email: string = '';
-  id: number = 4;
+  id!: number;
 
   tglState: boolean = false;
 
@@ -25,18 +25,17 @@ export class UpdateUserPanelComponent implements OnInit {
     this.userService.getUser().subscribe((users) => this.users = users);
   }
 
-  onSubmit() {
+  onSubmit(user: any) {
     const newUser = {
       name: this.name,
       email: this.email,
-      id: this.id,
+      id: this.user.id
     };
-
-    this.onUpdateUser.emit(newUser);
 
     this.name ='';
     this.email ='';
     console.log('update-user-panel: in OnSubmit');
+    this.onUpdateUser.emit(newUser);
   }
 
   tglUpdate(){

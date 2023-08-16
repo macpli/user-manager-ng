@@ -1,8 +1,8 @@
 {
   "students": [
     {
-      "name": "Zbyszek",
-      "email": "zbyszek@op.pl",
+      "name": "Maciej",
+      "email": "maciej@gmail.com",
       "id": 1
     },
     {
@@ -11,14 +11,9 @@
       "id": 2
     },
     {
-      "name": "Katarzyna",
-      "email": "katarzyna@op.pl",
+      "name": "Zbyszko z Bogdanca",
+      "email": "zbyszko@bogdaniec.com",
       "id": 3
-    },
-    {
-      "name": "AAA",
-      "email": "BBB",
-      "id": 4
     }
   ]
 }

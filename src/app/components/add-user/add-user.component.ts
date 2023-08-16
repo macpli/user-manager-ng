@@ -27,11 +27,10 @@ export class AddUserComponent implements OnInit {
       email: this.email,
     };
 
-    this.onAddUser.emit(newUser);
-
     this.name ='';
     this.email ='';
     console.log('add-user: in OnSubmit');
+    this.onAddUser.emit(newUser);
   }
 
   clickButton(path: string) {
