@@ -1,16 +1,19 @@
 <div class="card mx-auto">
   <div class="card-body">
+    <h3 class="mb-3">Add User</h3>
     <form class="needs-validation" novalidate (ngSubmit)="onSubmit()">
       <div class="mb-3">
         <label for="name" class="form-label">Name*</label>
-        <input type="text" class="form-control formName" name="name" [(ngModel)]="name" id="name" placeholder="Please enter a name" required>
+        <input 
+        type="text" class="form-control formName" name="name" 
+        [(ngModel)]="name" id="name" placeholder="Please enter a name" required>
       </div>
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
         <input type="email" class="form-control" name="email" [(ngModel)]="email" id="email" required>
       </div>
       <div class="buttonsContainer">
-        <button *ngIf="name.length > 0" type="submit" class="btn btn-success">Submit</button>
+        <button type="submit" class="btn btn-success">Submit</button>
       </div>
     </form>
   </div>

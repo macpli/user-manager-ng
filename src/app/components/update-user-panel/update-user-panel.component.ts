@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'User';
-import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-update-user-panel',
@@ -19,10 +18,9 @@ export class UpdateUserPanelComponent implements OnInit {
 
   tglState: boolean = false;
 
-  constructor(private router: Router, private userService: UserService) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
-    this.userService.getUser().subscribe((users) => this.users = users);
   }
 
   onSubmit(user: any) {
