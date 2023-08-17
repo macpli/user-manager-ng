@@ -31,8 +31,12 @@ export class UsersPanelComponent implements OnInit  {
       () => this.users = this.users.filter(u => u.id !== user.id));
   }
 
-  clickButtonBack(path: string){
+  clickBtnBack(path: string){
     this.router.navigate([path])
+  }
+
+  clickBtnAdd(path: string){
+    this.router.navigate([path]);
   }
 
 }

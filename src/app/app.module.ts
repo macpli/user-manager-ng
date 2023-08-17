@@ -13,6 +13,8 @@ import { AddUserComponent } from './components/add-user/add-user.component';
 import { HeaderComponent } from './components/header/header.component';
 import { DeleteUserComponent } from './components/delete-user/delete-user.component';
 import { UpdateUserPanelComponent } from './components/update-user-panel/update-user-panel.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { UpdateUserPanelComponent } from './components/update-user-panel/update-
     HeaderComponent,
     DeleteUserComponent,
     UpdateUserPanelComponent,
+    NavbarComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,11 +34,11 @@ import { UpdateUserPanelComponent } from './components/update-user-panel/update-
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot([
-      {path: 'welcome', component: MainComponent},
+      {path: 'welcome', component: HomeComponent},
+      {path: 'add-user', component: MainComponent},
       {path: 'users', component: UsersPanelComponent},
-      {path: 'users-update', component: UpdateUserPanelComponent},
-      {path: '**', component: MainComponent},
-      {path: '', component: MainComponent},
+      {path: '**', component: HomeComponent},
+      {path: '', component: HomeComponent},
     ]),
     NgbModule
   ],
