@@ -10,7 +10,6 @@ import { MainComponent } from './components/main/main.component';
 import { UsersPanelComponent } from './components/users-panel/users-panel.component';
 import { RouterModule } from '@angular/router';
 import { AddUserComponent } from './components/add-user/add-user.component';
-import { HeaderComponent } from './components/header/header.component';
 import { DeleteUserComponent } from './components/delete-user/delete-user.component';
 import { UpdateUserPanelComponent } from './components/update-user-panel/update-user-panel.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -22,7 +21,6 @@ import { HomeComponent } from './components/home/home.component';
     MainComponent,
     UsersPanelComponent,
     AddUserComponent,
-    HeaderComponent,
     DeleteUserComponent,
     UpdateUserPanelComponent,
     NavbarComponent,

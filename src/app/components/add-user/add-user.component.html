@@ -1,27 +1,25 @@
-
-  <div class="card">
-    <div class="card-body">
-      <h3 class="mb-3">Add User</h3>
-      <form class="needs-validation" novalidate (ngSubmit)="onSubmit()">
-        <div class="mb-3">
-          <label for="name" class="form-label">Name*</label>
-          <input 
-          type="text" class="form-control formName" name="name" 
-          [(ngModel)]="name" id="name" placeholder="Please enter a name" required>
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" name="email" [(ngModel)]="email" id="email" required>
-        </div>
-        <div class="buttonsContainer">
-          <button type="submit" class="btn btn-success">Submit</button>
-        </div>
-      </form>
-    </div>
+<div class="card">
+  <div class="card-body">
+    <h1 class="mb-3">Add User</h1>
+    <form class="needs-validation" novalidate (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name*</label>
+        <input type="text" class="form-control formName" name="name" [(ngModel)]="name" id="name"
+          placeholder="Please enter a name" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" name="email" [(ngModel)]="email" id="email" required>
+      </div>
+      <div class="buttonsContainer">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
   </div>
-
-
-<div class="container-sm mt-3">
-  <button type="button" class="btn btn-outline-secondary" (click)="clickButton('/users')">View Users</button>
-
+  <div class="container-sm mt-3 mb-3">
+    <button type="button" class="btn btn-outline-secondary" (click)="clickButton('/users')">View Users</button>
+  
+  </div>
 </div>
+
+

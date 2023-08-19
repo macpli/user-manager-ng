@@ -1,0 +1,18 @@
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.logo-name {
+    width: 250px;
+    text-align: center;
+    padding-left: 1em;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+ul {
+    justify-self: center;
+}

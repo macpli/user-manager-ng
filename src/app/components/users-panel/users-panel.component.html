@@ -3,8 +3,8 @@
     <div class="card-body">
       <h1>Users Panel</h1>
 
-      <button type="button" class="btn btn-outline-primary" (click)="clickBtnAdd('/add-user')">Add User</button>
-      
+      <button type="button" class="btn btn-outline-primary mt-3 mb-3" (click)="clickBtnAdd('/add-user')">Add User</button>
+
       <table class="table">
         <thead>
           <tr>
@@ -18,8 +18,12 @@
             <th scope="row">{{user.id}}</th>
             <td>{{user.name | titlecase}}</td>
             <td>{{user.email | lowercase}}</td>
-            <td><app-update-user-panel (onUpdateUser) = "updateUser($event)" [user]="user"></app-update-user-panel></td>
-            <td><app-delete-user (onDeleteUser) = "deleteUser(user)"></app-delete-user></td>
+            <td>
+              <app-update-user-panel (onUpdateUser)="updateUser($event)" [user]="user"></app-update-user-panel>
+            </td>
+            <td>
+              <app-delete-user (onDeleteUser)="deleteUser(user)"></app-delete-user>
+            </td>
           </tr>
         </tbody>
       </table>
