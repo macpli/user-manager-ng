@@ -8,7 +8,6 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
- 
   ngOnInit() {}
 
   users: User[] = [];
