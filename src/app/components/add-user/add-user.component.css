@@ -1,8 +1,0 @@
-.ng-pristine#name.ng-invalid.ng-touched {
-    background-color: tomato;
-}
-
-.buttonsContainer {
-    display: flex;
-    justify-content: space-between;
-}
