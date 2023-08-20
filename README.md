@@ -1,4 +1,4 @@
-# User Manager App 
+# User Manager CRUD App 
 
 # Demo 
 ### Home Page

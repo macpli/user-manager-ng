@@ -5,6 +5,10 @@
     justify-content: space-between;
 }
 
+.app-navbar {
+    background-color: #f8f9fa;
+}
+
 router-outlet {
     display: none;
 }

@@ -1,7 +1,7 @@
 .brief-introduction {
     color: white;
     text-align: center;
-    padding: 60px 0;
+    padding: 80px 0;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
   }
@@ -11,17 +11,12 @@
     background-color: #ffffff;
   }
   
-  .feature {
+  .card.feature {
     text-align: center;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 20px 0;
   }
   
-  .feature i {
-    font-size: 48px;
-    color: #007bff;
+  .feature svg {
+    color: rgba(9,9,121,1)
   }
   
   .feature h3 {

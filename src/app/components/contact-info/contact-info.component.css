@@ -18,3 +18,12 @@
     margin-right: 10px;
     color: #007bff;
   }
+
+  .container-main {
+    display: flex;
+  }
+
+  .gh-link {
+    color: black;
+    text-decoration: none;
+  }
