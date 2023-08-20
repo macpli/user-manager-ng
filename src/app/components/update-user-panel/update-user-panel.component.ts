@@ -11,6 +11,7 @@ export class UpdateUserPanelComponent implements OnInit {
   @Input() user!: User;
   @Input() users!: User[];
   @Output() onUpdateUser: EventEmitter<User> = new EventEmitter;
+  @Output() onTglUpdate: EventEmitter<Boolean> = new EventEmitter;
 
   name: string = '';
   email: string = '';
@@ -38,8 +39,14 @@ export class UpdateUserPanelComponent implements OnInit {
 
   tglUpdate(){
     if(this.tglState == false){
-      return this.tglState = true;
-    }else return this.tglState = false;
+      this.tglState = true;
+      console.log(this.tglState)
+      this.onTglUpdate.emit(this.tglState)
+      return this.tglState
+    }else
+    this.tglState = false
+    this.onTglUpdate.emit(this.tglState)
+    return this.tglState;
   }
 
   clickButtonBack(path: string){

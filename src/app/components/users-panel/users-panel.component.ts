@@ -13,6 +13,8 @@ export class UsersPanelComponent implements OnInit  {
   
   @Output() users: User[] = [];
 
+  tglState: boolean = true;
+
   constructor(private router: Router, private userService: UserService) { }
 
   ngOnInit(): void {
@@ -29,6 +31,17 @@ export class UsersPanelComponent implements OnInit  {
     this.userService.deleteUser(user).
     subscribe(
       () => this.users = this.users.filter(u => u.id !== user.id));
+  }
+
+  onTglUpdate(boolean: Boolean){
+    if(boolean == true){
+      this.tglState = false;
+      console.log("show user panel: " + this.tglState)
+      return this.tglState
+    }else
+    this.tglState = true
+    console.log("show user panel: " + this.tglState)
+    return this.tglState;
   }
 
   clickBtnBack(path: string){
