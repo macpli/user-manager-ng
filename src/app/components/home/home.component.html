@@ -1,12 +1,63 @@
-<div class="container-lg mt-5 mb-3">
-    <div class="card text-center">
-        <div class="card-header">
-          Welcome!
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Lorem ipsum, dolor sit amet </h5>
-          <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure est voluptatum praesentium porro eius.</p>
-          <a [routerLink]="['/users']" class="btn btn-primary">Get Started</a>
+<section class="brief-introduction">
+  <h1>Welcome to User Manager App</h1>
+  <p>Your all-in-one solution for efficient user management.</p>
+</section>
+
+<section class="key-features">
+  <div class="container">
+    <h2>Key Features</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="feature">
+          <i class="fa fa-users"></i>
+          <h3>Efficient User Management</h3>
+          <p>Streamline user data, roles, and permissions effortlessly.</p>
         </div>
       </div>
-</div>
+      <div class="col-md-4">
+        <div class="feature">
+          <i class="fa fa-cog"></i>
+          <h3>Customizable Settings</h3>
+          <p>Configure the app to match your organization's needs.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature">
+          <i class="fa fa-chart-line"></i>
+          <h3>Data Analytics</h3>
+          <p>Gain insights with detailed analytics and reports.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="call-to-action">
+  <div class="container">
+    <h2>Ready to Get Started?</h2>
+    <p>Manage your users efficiently with our user manager app.</p>
+    <a [routerLink]="['/users']" class="btn ">Get Started</a>  </div>
+</section>
+
+<section class="latest-updates">
+  <div class="container">
+    <h2>Latest Updates</h2>
+    <div class="update">
+      <h3>Version 2.0 Released</h3>
+      <p>We are excited to announce the release of User Manager App version 2.0. This update includes...</p>
+      <a href="#" class="read-more-link">Read More</a>
+    </div>
+    <!-- Add more updates here -->
+  </div>
+</section>
+
+<section class="contact-info">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or need assistance, feel free to contact us:</p>
+    <ul class="contact-list">
+      <li><i class="fa fa-envelope"></i> Email: info@usermanagerapp.com</li>
+      <li><i class="fa fa-phone"></i> Phone: (123) 456-7890</li>
+    </ul>
+  </div>
+</section>
