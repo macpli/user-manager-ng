@@ -69,24 +69,5 @@
     color: #007bff;
   }
   
-  .contact-info {
-    text-align: center;
-    padding: 60px 0;
-    background-color: #f8f9fa;
-  }
-  
-  .contact-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-  }
-  
-  .contact-list li {
-    margin-bottom: 10px;
-  }
-  
-  .contact-list i {
-    margin-right: 10px;
-    color: #007bff;
-  }
+ 
     
