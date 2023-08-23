@@ -18,12 +18,13 @@ export class UsersPanelComponent implements OnInit  {
   constructor(private router: Router, private userService: UserService) { }
 
   ngOnInit(): void {
-    this.userService.getUser().subscribe((users) => this.users = users);
+    this.refresh();
   }
 
   updateUser(user: User){
     console.log('in updateUser ', user.name, user.id);
     this.userService.updateUser(user).subscribe();
+    this.refresh();
   }
 
   deleteUser(user: User){
@@ -31,6 +32,10 @@ export class UsersPanelComponent implements OnInit  {
     this.userService.deleteUser(user).
     subscribe(
       () => this.users = this.users.filter(u => u.id !== user.id));
+  }
+
+  refresh() {
+    this.userService.getUser().subscribe((users) => this.users = users);
   }
 
   onTglUpdate(boolean: Boolean){
