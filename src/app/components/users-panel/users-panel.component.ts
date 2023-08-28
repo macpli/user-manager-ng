@@ -21,6 +21,7 @@ export class UsersPanelComponent implements OnInit  {
     this.refresh();
   }
 
+  
   updateUser(user: User){
     console.log('in updateUser ', user.name, user.id);
     this.userService.updateUser(user).subscribe();

@@ -25,6 +25,11 @@ export class UserService {
     return this.http.get<User[]>(this.url)
   }
 
+  getSingleUser(id: number):Observable<User> {
+    const newUrl = `${this.url}/${id}`;
+    return this.http.get<User>(newUrl)
+  }
+
   updateUser(user: User): Observable<User> {
     const newUrl = `${this.url}/${user.id}`;
     return this.http.put<User>(newUrl, user, httpOptions);

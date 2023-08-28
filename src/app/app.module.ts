@@ -16,6 +16,7 @@ import { UpdateUserPanelComponent } from './components/update-user-panel/update-
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContactInfoComponent } from './components/contact-info/contact-info.component';
+import { UpdateUserComponent } from './components/update-user/update-user.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ContactInfoComponent } from './components/contact-info/contact-info.com
     NavbarComponent,
     HomeComponent,
     ContactInfoComponent,
+    UpdateUserComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +40,7 @@ import { ContactInfoComponent } from './components/contact-info/contact-info.com
       {path: 'welcome', component: HomeComponent},
       {path: 'add-user', component: MainComponent},
       {path: 'users', component: UsersPanelComponent},
+      {path: 'user/:id?', component: UpdateUserComponent},
       {path: '**', component: HomeComponent},
       {path: '', component: HomeComponent},
     ]),

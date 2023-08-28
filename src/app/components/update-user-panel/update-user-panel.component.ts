@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'User';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-update-user-panel',
@@ -8,6 +9,7 @@ import { User } from 'User';
   styleUrls: ['./update-user-panel.component.css']
 })
 export class UpdateUserPanelComponent implements OnInit {
+  @Input() userId!: number;
   @Input() user!: User;
   @Input() users!: User[];
   @Output() onUpdateUser: EventEmitter<User> = new EventEmitter;
@@ -19,9 +21,21 @@ export class UpdateUserPanelComponent implements OnInit {
 
   tglState: boolean = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+              private userService: UserService,) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
+    this.getSingleUser(this.userId);
+  }
+  
+  getSingleUser(id: number){
+    this.userService.getSingleUser(this.userId).subscribe((user) => {
+      this.user = user;
+      this.name = this.user.name;
+      this.email = this.user.email;
+      console.log(this.user);
+
+    });
   }
 
   onSubmit(user: any) {
