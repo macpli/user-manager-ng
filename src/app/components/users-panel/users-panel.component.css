@@ -1,4 +1,12 @@
-.card-header {
-    font-weight: 500;
-    font-size: 40px;
+ .edit-col {
+    display: flex;
+    justify-content: right;
+ }
+
+ .edit-col button{
+    margin-right: 0.5em;
+ }
+
+ .btn.update {
+   text-align: center;
  }

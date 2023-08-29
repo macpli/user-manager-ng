@@ -2,8 +2,10 @@
 
 <div class="container mt-5 mb-3">
     <div class="card ">
+      <div class="card-header">
+        Update User
+      </div>
         <div class="card-body update-panel">
-        <h1 class="mb-3">Update User</h1>
           <form class="needs-validation" novalidate (ngSubmit)="onSubmit(user)" >
             <div class="mb-3">
               <label for="user.name" class="form-label">Name: </label>
@@ -16,7 +18,7 @@
             <button type="submit" class="btn btn-success mb-3">Update</button>
           </form>
 
-          <button type="button" class="btn btn-outline-secondary">Close</button>
+          <button type="button" class="btn btn-outline-secondary" (click)="onReturn('/users')">Return</button>
         </div>
       </div>
 </div>

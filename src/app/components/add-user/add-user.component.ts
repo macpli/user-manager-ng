@@ -31,6 +31,7 @@ export class AddUserComponent implements OnInit {
     this.email ='';
     console.log('add-user: in OnSubmit');
     this.onAddUser.emit(newUser);
+    this.router.navigate(['/users']);
   }
 
   clickButton(path: string) {
