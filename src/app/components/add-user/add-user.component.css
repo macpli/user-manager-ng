@@ -1,4 +1,12 @@
+.input-error {
+    color: tomato;
+}
+
 .ng-pristine#name.ng-invalid.ng-touched {
+    background-color: tomato;
+}
+
+.ng-pristine#email.ng-invalid.ng-touched {
     background-color: tomato;
 }
 
