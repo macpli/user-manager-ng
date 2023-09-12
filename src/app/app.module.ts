@@ -17,6 +17,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContactInfoComponent } from './components/contact-info/contact-info.component';
 import { UpdateUserComponent } from './components/update-user/update-user.component';
+import { ConfirmDialogComponent } from './components/dialogs/confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { UpdateUserComponent } from './components/update-user/update-user.compon
     HomeComponent,
     ContactInfoComponent,
     UpdateUserComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     BrowserModule,

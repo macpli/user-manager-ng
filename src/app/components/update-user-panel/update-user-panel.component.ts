@@ -2,6 +2,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'User';
 import { UserService } from 'src/app/services/user.service';
+import { ConfirmDialogComponent } from '../dialogs/confirm-dialog/confirm-dialog.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-update-user-panel',
@@ -17,8 +19,13 @@ export class UpdateUserPanelComponent implements OnInit {
   email: string = '';
   id!: number;
 
+  modalInfo = {type : 'update', isConfirmed: false}
+  
+  dialogConfirm: boolean = false;
+
   constructor(private router: Router,
-              private userService: UserService,) { }
+              private userService: UserService,
+              private modalService: NgbModal) { }
 
   ngOnInit(): void { 
     this.getSingleUser(this.userId);
@@ -40,12 +47,23 @@ export class UpdateUserPanelComponent implements OnInit {
       email: this.email,
       id: this.user.id
     };
-
+    
+    this.onUpdateUser.emit(newUser);
     this.name ='';
     this.email ='';
-    console.log('update-user-panel: in OnSubmit');
-    this.onUpdateUser.emit(newUser);
     this.router.navigate(['/users']);
+    
+  }
+
+  openModal() {
+    const modalRef = this.modalService.open(ConfirmDialogComponent);
+    modalRef.componentInstance.modalInfo = this.modalInfo;
+
+    modalRef.result.then((result) => {
+      if(result.isConfirmed) {
+        this.onSubmit(this.user);
+      }
+    })
   }
 
   onReturn(path: string){

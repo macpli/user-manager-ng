@@ -13,7 +13,7 @@
               <label for="email" class="form-label">Email: </label>
               <input type="email" class="form-control" name="email" [(ngModel)]="this.email" id="email" placeholder="Change email">
             </div>
-            <button type="submit" class="btn btn-success mb-3">Update</button>
+            <button type="button" class="btn btn-primary mb-3" (click)="openModal()">Update</button>
           </form>
 
           <button type="button" class="btn btn-outline-secondary" (click)="onReturn('/users')">Return</button>
