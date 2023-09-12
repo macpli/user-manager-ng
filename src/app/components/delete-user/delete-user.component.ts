@@ -17,10 +17,10 @@ export class DeleteUserComponent implements OnInit {
   constructor(private modalService: NgbModal) { }
 
   ngOnInit(): void {
-
+  
   }
 
-  openModal(user: any) {
+  openModal(user: User) {
     const modalRef = this.modalService.open(ConfirmDialogComponent);
     modalRef.componentInstance.modalInfo = this.modalInfo;
 
@@ -31,7 +31,7 @@ export class DeleteUserComponent implements OnInit {
     })
   }
 
-  onDelete(user: any){
+  onDelete(user: User){
     console.log('in onDelete')
     this.onDeleteUser.emit(user)
   }

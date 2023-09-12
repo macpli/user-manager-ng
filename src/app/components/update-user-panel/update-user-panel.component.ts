@@ -20,8 +20,6 @@ export class UpdateUserPanelComponent implements OnInit {
   id!: number;
 
   modalInfo = {type : 'update', isConfirmed: false}
-  
-  dialogConfirm: boolean = false;
 
   constructor(private router: Router,
               private userService: UserService,
@@ -41,7 +39,7 @@ export class UpdateUserPanelComponent implements OnInit {
     });
   }
 
-  onSubmit(user: any) {
+  onSubmit(user: User) {
     const newUser = {
       name: this.name,
       email: this.email,

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalInfo } from '../confirm-dialog.ModalInfo';
 
 @Component({
   selector: 'app-confirm-dialog',
@@ -7,7 +8,7 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./confirm-dialog.component.css']
 })
 export class ConfirmDialogComponent implements OnInit {
-  @Input() public modalInfo: any;
+  @Input() public modalInfo!: ModalInfo;
   @Output() confirm: EventEmitter<any> = new EventEmitter();
 
   constructor(public activeModal: NgbActiveModal) { }
