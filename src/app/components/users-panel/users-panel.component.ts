@@ -15,6 +15,9 @@ export class UsersPanelComponent implements OnInit  {
 
   tglState: boolean = true;
 
+  page: number = 1;
+  pageSize: number = 4;
+
   constructor(private router: Router, private userService: UserService) { }
 
   ngOnInit(): void {
